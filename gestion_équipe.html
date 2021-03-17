@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-17 mer. 16:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Séminaire sur l’organisation et la gestion d’une équipe au sein d’un projet</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jean-Claude Raskin (présentation), Simon Meyer (notes)" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Séminaire sur l’organisation et la gestion d’une équipe au sein d’un projet</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2da78a4">1. Introduction</a>
+<ul>
+<li><a href="#org184b790">1.1. World Skills</a></li>
+</ul>
+</li>
+<li><a href="#orgd0d7508">2. Une équipe</a>
+<ul>
+<li><a href="#org6977ef6">2.1. Dans une équipe</a></li>
+<li><a href="#org5eaf68c">2.2. La communication</a></li>
+<li><a href="#org12742bb">2.3. En personne</a></li>
+</ul>
+</li>
+<li><a href="#orgd489a7e">3. Profils</a>
+<ul>
+<li><a href="#org9321a8c">3.1. Positions de vie</a>
+<ul>
+<li><a href="#org91c098c">3.1.1. Tout négatif</a></li>
+<li><a href="#org002ed14">3.1.2. Moi positif et les autres négatifs</a></li>
+<li><a href="#org1432d4b">3.1.3. Moi négatif et les autres positifs</a></li>
+<li><a href="#org7f42d58">3.1.4. Moi positif et les autres positifs</a></li>
+<li><a href="#org9bb9321">3.1.5. Eléments perturbateurs</a></li>
+</ul>
+</li>
+<li><a href="#org473b2df">3.2. Métaphores du cerveau</a>
+<ul>
+<li><a href="#org690392b">3.2.1. Cerveau réptilien</a></li>
+<li><a href="#org097f221">3.2.2. Cerveau limbique</a></li>
+<li><a href="#org16e24ff">3.2.3. Néo-cortex</a></li>
+<li><a href="#orge620967">3.2.4. Hémisphères</a></li>
+<li><a href="#org754812a">3.2.5. Equilibre en tout nécessaire</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1b98af0">4. Couleurs de la personalité</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org7c1ea2f">4.0.1. Couleur dominante</a></li>
+<li><a href="#orgf49dd8a">4.0.2. Couleur secondaire</a></li>
+<li><a href="#orgdfc5fe5">4.0.3. Communication</a></li>
+<li><a href="#org0ecd852">4.0.4. ATTENTION</a></li>
+</ul>
+</li>
+<li><a href="#org6b6d655">4.1. Couleur orange (émotionel)</a>
+<ul>
+<li><a href="#orgb6008bc">4.1.1. Qualités</a></li>
+<li><a href="#org8bf7f2b">4.1.2. Environnement</a></li>
+<li><a href="#org8e737fd">4.1.3. Filtre perception</a></li>
+<li><a href="#org59de478">4.1.4. Motivation</a></li>
+<li><a href="#org6c72829">4.1.5. Comportement conditionnel</a></li>
+<li><a href="#org68792e5">4.1.6. Comportement conflictuel</a></li>
+</ul>
+</li>
+<li><a href="#org3bbf93f">4.2. Couleur verte</a>
+<ul>
+<li><a href="#orgfc301ff">4.2.1. Qualités</a></li>
+<li><a href="#org6c42157">4.2.2. Environnement</a></li>
+<li><a href="#org7964d7a">4.2.3. Filtre perception</a></li>
+<li><a href="#orgda8c305">4.2.4. Motivation</a></li>
+<li><a href="#org94d0cc8">4.2.5. Comportement conditionnel</a></li>
+<li><a href="#orgbb259d7">4.2.6. Comportement conflictuel</a></li>
+</ul>
+</li>
+<li><a href="#org199a31a">4.3. Couleur bleue</a>
+<ul>
+<li><a href="#org3125b31">4.3.1. Qualités</a></li>
+<li><a href="#orgd8792da">4.3.2. Environnement</a></li>
+<li><a href="#org0910ada">4.3.3. Filtre perception</a></li>
+<li><a href="#orgd594733">4.3.4. Motivation</a></li>
+<li><a href="#orgd9400c8">4.3.5. Comportement conditionnel</a></li>
+<li><a href="#org180c2d2">4.3.6. Comportement conflictuel</a></li>
+</ul>
+</li>
+<li><a href="#orgb1a92c3">4.4. Couleur violette</a>
+<ul>
+<li><a href="#org4cb41d1">4.4.1. Qualités</a></li>
+<li><a href="#org5dc75e3">4.4.2. Environnement</a></li>
+<li><a href="#org5801cf5">4.4.3. Filtre perception</a></li>
+<li><a href="#org4d2db3a">4.4.4. Motivation</a></li>
+<li><a href="#orge4edb92">4.4.5. Comportement conditionnel</a></li>
+<li><a href="#org9f7a1ed">4.4.6. Comportement conflituel</a></li>
+</ul>
+</li>
+<li><a href="#org6634f0b">4.5. Couleur rouge</a>
+<ul>
+<li><a href="#org196579e">4.5.1. Qualités</a></li>
+<li><a href="#org45c0163">4.5.2. Environnement</a></li>
+<li><a href="#org37f4ab2">4.5.3. Filtre perception</a></li>
+<li><a href="#org927fda3">4.5.4. Motivation</a></li>
+<li><a href="#orgee7fd2c">4.5.5. Comportement conditionnel</a></li>
+<li><a href="#org937988e">4.5.6. Comportement conflictuel</a></li>
+</ul>
+</li>
+<li><a href="#orge367c05">4.6. Couleur jaune</a>
+<ul>
+<li><a href="#orgf25f193">4.6.1. Qualités</a></li>
+<li><a href="#org4813405">4.6.2. Environnement</a></li>
+<li><a href="#org261b97c">4.6.3. Filtre perception</a></li>
+<li><a href="#org21c9eba">4.6.4. Motivation</a></li>
+<li><a href="#org6d363db">4.6.5. Comportement conditionnel</a></li>
+<li><a href="#org9bc7424">4.6.6. Comportement conflictuel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga108715">5. Environnement favorable</a></li>
+<li><a href="#org0c9ef2b">6. Tableau de stress</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2da78a4" class="outline-2">
+<h2 id="org2da78a4"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Présentation des tests ComColors et Belbin</li>
+<li>Présentation personnelle du conférencier</li>
+<li>Présentation des World Skills</li>
+<li>Déterminer ce qu'est un équipe</li>
+<li>Déterminer ce qu'est un groupe</li>
+<li>Déterminer la personalité et les compétences des membres de l'équipe</li>
+</ul>
+</div>
+<div id="outline-container-org184b790" class="outline-3">
+<h3 id="org184b790"><span class="section-number-3">1.1</span> World Skills</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Compétition de compétences (coiffure, cuisine, menuiserie, design etc, en un temps imparti (rapide))</li>
+<li>Représentation nationale</li>
+<li>J-C Raskin coach l'équipe belge</li>
+<li>Une bonne coordination nécessaire</li>
+<li>Esprit d'équipe nécessaire</li>
+<li>Experience professionelle</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd0d7508" class="outline-2">
+<h2 id="orgd0d7508"><span class="section-number-2">2</span> Une équipe</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Equipe ou groupe?
+<ul class="org-ul">
+<li>Groupe: somme d'individualités en un lieu (pas forcément liées d'une manière ou un autre)</li>
+<li>Equipe: Groupe de personnes devant accomplir une tâche</li>
+<li>Equipe: Groupe de personnes qui agissent, se distraient (nécessite de bonnes compétences comportementales)</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org6977ef6" class="outline-3">
+<h3 id="org6977ef6"><span class="section-number-3">2.1</span> Dans une équipe</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>De bons soft skills</li>
+<li>De la confiance dans les compétences des autres</li>
+<li>Esprit d'équipe nécessaire
+<ul class="org-ul">
+<li>Dans chaque équipe il y a des groupes qui se dirigent ensemble</li>
+<li>Attention de ne pas choisir que des gens identiques</li>
+</ul></li>
+<li>Toujours garder l'envie d'apprendre</li>
+<li>Ne pas rejeter des individus juste parce qu'ils sont différents</li>
+<li>Une équipe qui fonctionne démultiplie le nombre de cerveaux (1+1 = 3)
+<ul class="org-ul">
+<li>Plus forte que la somme de ses composants</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5eaf68c" class="outline-3">
+<h3 id="org5eaf68c"><span class="section-number-3">2.2</span> La communication</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Verbale (ce qu'on dit) 7%</li>
+<li>Para-verbale (comment on le dit) (ton, émotions etc) 38%</li>
+<li>Non verbale (ce qu'on fait) (Gestes etc) 55%</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org12742bb" class="outline-3">
+<h3 id="org12742bb"><span class="section-number-3">2.3</span> En personne</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Accepter ses faiblesses</li>
+<li>Accepter les forces de l'autre</li>
+<li>Positivité oui, mais attention à éviter le tout positif (équilibre à trouver, pur positif n'amène rien)</li>
+<li>Gérer les autres demande du discernement</li>
+<li>Eviter les coups de pression sur les autres</li>
+<li>Penser à récuperer de temps en temps</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd489a7e" class="outline-2">
+<h2 id="orgd489a7e"><span class="section-number-2">3</span> Profils</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Profils Belbin ou autre viennent de Carl Jung</li>
+<li>Théorie des personnalités multiples dans les années 20</li>
+</ul>
+</div>
+<div id="outline-container-org9321a8c" class="outline-3">
+<h3 id="org9321a8c"><span class="section-number-3">3.1</span> Positions de vie</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Les autres (négatif)</th>
+<th scope="col" class="org-left">Les autres (positif)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Moi (négatif)</td>
+<td class="org-left">Moi (positif)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org91c098c" class="outline-4">
+<h4 id="org91c098c"><span class="section-number-4">3.1.1</span> Tout négatif</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>A éviter parce qu'on déprime très vite</li>
+<li>Depression</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org002ed14" class="outline-4">
+<h4 id="org002ed14"><span class="section-number-4">3.1.2</span> Moi positif et les autres négatifs</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>Arrogance</li>
+<li>Insécurité</li>
+<li>Agressivité</li>
+<li>Mépris</li>
+<li>A éviter, côté vitriolé</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1432d4b" class="outline-4">
+<h4 id="org1432d4b"><span class="section-number-4">3.1.3</span> Moi négatif et les autres positifs</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>Culpabilité</li>
+<li>Admiration</li>
+<li>Frustration</li>
+<li>Infériorité</li>
+<li>A éviter, défaitiste</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7f42d58" class="outline-4">
+<h4 id="org7f42d58"><span class="section-number-4">3.1.4</span> Moi positif et les autres positifs</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Coopération</li>
+<li>Ecoute</li>
+<li>Respect</li>
+<li>Ouverture</li>
+<li>Bien, mais attention a l'excssif dans le positif</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9bb9321" class="outline-4">
+<h4 id="org9bb9321"><span class="section-number-4">3.1.5</span> Eléments perturbateurs</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<ul class="org-ul">
+<li>Nous amènent naturellement vers un des mauvais trois côtés</li>
+<li>Attention à la réaction et savoir comment se remettre</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org473b2df" class="outline-3">
+<h3 id="org473b2df"><span class="section-number-3">3.2</span> Métaphores du cerveau</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org690392b" class="outline-4">
+<h4 id="org690392b"><span class="section-number-4">3.2.1</span> Cerveau réptilien</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>Manger</li>
+<li>Boire</li>
+<li>Procréer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org097f221" class="outline-4">
+<h4 id="org097f221"><span class="section-number-4">3.2.2</span> Cerveau limbique</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>Emotions</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org16e24ff" class="outline-4">
+<h4 id="org16e24ff"><span class="section-number-4">3.2.3</span> Néo-cortex</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>Intelligence</li>
+<li>Relexion</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge620967" class="outline-4">
+<h4 id="orge620967"><span class="section-number-4">3.2.4</span> Hémisphères</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>Gauche: Rationnel</li>
+<li>Droite: Emotionel</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org754812a" class="outline-4">
+<h4 id="org754812a"><span class="section-number-4">3.2.5</span> Equilibre en tout nécessaire</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<ul class="org-ul">
+<li>Pas toujours rationel</li>
+<li><b><b>Nécéssaire de bien se connaître</b></b></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b98af0" class="outline-2">
+<h2 id="org1b98af0"><span class="section-number-2">4</span> Couleurs de la personalité</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Permet de trouver les éléments de la personalités</li>
+<li>Certains élements sont à améliorer</li>
+<li>Il est souvent nécessaire de faire des choses pour lesquels c'est moins naturel
+<ul class="org-ul">
+<li>Induit une grande fatigue</li>
+</ul></li>
+<li>Pas beaucoup d'inné, personalité définie vers 7 ans</li>
+</ul>
+</div>
+<div id="outline-container-org7c1ea2f" class="outline-4">
+<h4 id="org7c1ea2f"><span class="section-number-4">4.0.1</span> Couleur dominante</h4>
+<div class="outline-text-4" id="text-4-0-1">
+<ul class="org-ul">
+<li>Caractéristique définissante</li>
+<li>Motivation permanante</li>
+<li>Mode de perception</li>
+<li>Mode de communication</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf49dd8a" class="outline-4">
+<h4 id="orgf49dd8a"><span class="section-number-4">4.0.2</span> Couleur secondaire</h4>
+<div class="outline-text-4" id="text-4-0-2">
+<ul class="org-ul">
+<li>Peut changer au cours d'une vie (suite a certains évennements marquant)</li>
+<li>Motivation actuelle</li>
+<li>Combinaison entre ces deux couleurs dit comment le stress marche et comment on le gère</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdfc5fe5" class="outline-4">
+<h4 id="orgdfc5fe5"><span class="section-number-4">4.0.3</span> Communication</h4>
+<div class="outline-text-4" id="text-4-0-3">
+<ul class="org-ul">
+<li>La communication peut être difficile entre des couleurs</li>
+<li>On peut avoir un conflit communicationel</li>
+<li>Bien connaître les autres pour savoir comment leur parler</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ecd852" class="outline-4">
+<h4 id="org0ecd852"><span class="section-number-4">4.0.4</span> ATTENTION</h4>
+<div class="outline-text-4" id="text-4-0-4">
+<ul class="org-ul">
+<li><b><b>NE PAS SE FOCALISER EXCESSIVEMENT SUR LES COULEURS (C'EST A TITRE INDICATIF)</b></b></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6b6d655" class="outline-3">
+<h3 id="org6b6d655"><span class="section-number-3">4.1</span> Couleur orange (émotionel)</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgb6008bc" class="outline-4">
+<h4 id="orgb6008bc"><span class="section-number-4">4.1.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>Aimables</li>
+<li>Chaleureux</li>
+<li>Dévoués</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8bf7f2b" class="outline-4">
+<h4 id="org8bf7f2b"><span class="section-number-4">4.1.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>Orienté vers les personnes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8e737fd" class="outline-4">
+<h4 id="org8e737fd"><span class="section-number-4">4.1.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>Emotions</li>
+<li>Ressenti</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org59de478" class="outline-4">
+<h4 id="org59de478"><span class="section-number-4">4.1.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li>Besoins sensoriels</li>
+<li>Besoin de se sentir apprécié</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c72829" class="outline-4">
+<h4 id="org6c72829"><span class="section-number-4">4.1.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<ul class="org-ul">
+<li>Répond au désirs des autres avant les siens</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org68792e5" class="outline-4">
+<h4 id="org68792e5"><span class="section-number-4">4.1.6</span> Comportement conflictuel</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<ul class="org-ul">
+<li>Commet des erreurs/culpabilise</li>
+<li>Plaintes</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3bbf93f" class="outline-3">
+<h3 id="org3bbf93f"><span class="section-number-3">4.2</span> Couleur verte</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgfc301ff" class="outline-4">
+<h4 id="orgfc301ff"><span class="section-number-4">4.2.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Réfléchi</li>
+<li>Tranquille</li>
+<li>Distancé</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c42157" class="outline-4">
+<h4 id="org6c42157"><span class="section-number-4">4.2.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>Orienté vers les tâches</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7964d7a" class="outline-4">
+<h4 id="org7964d7a"><span class="section-number-4">4.2.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>Commence par réfléchir</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgda8c305" class="outline-4">
+<h4 id="orgda8c305"><span class="section-number-4">4.2.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<ul class="org-ul">
+<li>Besoin d'espace et de temps</li>
+<li>Besoin de tranquilité</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94d0cc8" class="outline-4">
+<h4 id="org94d0cc8"><span class="section-number-4">4.2.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<ul class="org-ul">
+<li>Ne montre pas ses sentiments et ses difficultés</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb259d7" class="outline-4">
+<h4 id="orgbb259d7"><span class="section-number-4">4.2.6</span> Comportement conflictuel</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<ul class="org-ul">
+<li>Ne peut plus se décider</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org199a31a" class="outline-3">
+<h3 id="org199a31a"><span class="section-number-3">4.3</span> Couleur bleue</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org3125b31" class="outline-4">
+<h4 id="org3125b31"><span class="section-number-4">4.3.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>Logique</li>
+<li>Compétent</li>
+<li>Structuré</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8792da" class="outline-4">
+<h4 id="orgd8792da"><span class="section-number-4">4.3.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>Orienté vers les tâches</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0910ada" class="outline-4">
+<h4 id="org0910ada"><span class="section-number-4">4.3.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>Pensée logique</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd594733" class="outline-4">
+<h4 id="orgd594733"><span class="section-number-4">4.3.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<ul class="org-ul">
+<li>Besoin d'être félicité pour son travail</li>
+<li>Besoin de structurer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd9400c8" class="outline-4">
+<h4 id="orgd9400c8"><span class="section-number-4">4.3.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ul class="org-ul">
+<li>Perfectionnisme</li>
+<li>Obsession sur les détails</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org180c2d2" class="outline-4">
+<h4 id="org180c2d2"><span class="section-number-4">4.3.6</span> Comportement conflictuel</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<ul class="org-ul">
+<li>Se met en colère</li>
+<li>Fait les choses à la place des autres</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1a92c3" class="outline-3">
+<h3 id="orgb1a92c3"><span class="section-number-3">4.4</span> Couleur violette</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org4cb41d1" class="outline-4">
+<h4 id="org4cb41d1"><span class="section-number-4">4.4.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>Evaluateur</li>
+<li>Fiable</li>
+<li>De confiance</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5dc75e3" class="outline-4">
+<h4 id="org5dc75e3"><span class="section-number-4">4.4.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li>Orienté vers la tâche ET la personne</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5801cf5" class="outline-4">
+<h4 id="org5801cf5"><span class="section-number-4">4.4.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li>Il évalue en premier</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d2db3a" class="outline-4">
+<h4 id="org4d2db3a"><span class="section-number-4">4.4.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ul class="org-ul">
+<li>Besoin que son avis soit pris en compte, besoin d'être missionné</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4edb92" class="outline-4">
+<h4 id="orge4edb92"><span class="section-number-4">4.4.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-4-5">
+<ul class="org-ul">
+<li>Haut niveau d'exigence (de lui et des autres)</li>
+<li>Attention au burn-out</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f7a1ed" class="outline-4">
+<h4 id="org9f7a1ed"><span class="section-number-4">4.4.6</span> Comportement conflituel</h4>
+<div class="outline-text-4" id="text-4-4-6">
+<ul class="org-ul">
+<li>Impose ses convictions</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6634f0b" class="outline-3">
+<h3 id="org6634f0b"><span class="section-number-3">4.5</span> Couleur rouge</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org196579e" class="outline-4">
+<h4 id="org196579e"><span class="section-number-4">4.5.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li>Actif</li>
+<li>Energique</li>
+<li>Caméléon</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45c0163" class="outline-4">
+<h4 id="org45c0163"><span class="section-number-4">4.5.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ul class="org-ul">
+<li>En fonction des opportunités (tâche OU personnes)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org37f4ab2" class="outline-4">
+<h4 id="org37f4ab2"><span class="section-number-4">4.5.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<ul class="org-ul">
+<li>Agit en premier</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org927fda3" class="outline-4">
+<h4 id="org927fda3"><span class="section-number-4">4.5.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-5-4">
+<ul class="org-ul">
+<li>Besoin d'être important en relevant des challenges et des défis</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee7fd2c" class="outline-4">
+<h4 id="orgee7fd2c"><span class="section-number-4">4.5.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-5-5">
+<ul class="org-ul">
+<li>Doit trouver une solution et vite</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org937988e" class="outline-4">
+<h4 id="org937988e"><span class="section-number-4">4.5.6</span> Comportement conflictuel</h4>
+<div class="outline-text-4" id="text-4-5-6">
+<ul class="org-ul">
+<li>Explosion, bruit, carnage</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge367c05" class="outline-3">
+<h3 id="orge367c05"><span class="section-number-3">4.6</span> Couleur jaune</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-orgf25f193" class="outline-4">
+<h4 id="orgf25f193"><span class="section-number-4">4.6.1</span> Qualités</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<ul class="org-ul">
+<li>Spontané</li>
+<li>Ludique</li>
+<li>Différent</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4813405" class="outline-4">
+<h4 id="org4813405"><span class="section-number-4">4.6.2</span> Environnement</h4>
+<div class="outline-text-4" id="text-4-6-2">
+<ul class="org-ul">
+<li>Orienté vers les personnes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org261b97c" class="outline-4">
+<h4 id="org261b97c"><span class="section-number-4">4.6.3</span> Filtre perception</h4>
+<div class="outline-text-4" id="text-4-6-3">
+<ul class="org-ul">
+<li>Réagit en premier</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21c9eba" class="outline-4">
+<h4 id="org21c9eba"><span class="section-number-4">4.6.4</span> Motivation</h4>
+<div class="outline-text-4" id="text-4-6-4">
+<ul class="org-ul">
+<li>Besoin de s'amuser et de nouveauté, de se sentir libre dans son travail</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d363db" class="outline-4">
+<h4 id="org6d363db"><span class="section-number-4">4.6.5</span> Comportement conditionnel</h4>
+<div class="outline-text-4" id="text-4-6-5">
+<ul class="org-ul">
+<li>Raleur et rameur, aime pas les efforts, tout devient difficile à faire</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9bc7424" class="outline-4">
+<h4 id="org9bc7424"><span class="section-number-4">4.6.6</span> Comportement conflictuel</h4>
+<div class="outline-text-4" id="text-4-6-6">
+<ul class="org-ul">
+<li>Dos au mur, il rejette la faute sur les autres</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga108715" class="outline-2">
+<h2 id="orga108715"><span class="section-number-2">5</span> Environnement favorable</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Attention, le test auto-réalisé n'est pas toujours fiable s'il est pris soi même</li>
+<li>Correspondance Couleur - Belbin</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Belbin</th>
+<th scope="col" class="org-left">Couleur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Concepteur</td>
+<td class="org-left">Jaune</td>
+</tr>
+
+<tr>
+<td class="org-left">Promoteur</td>
+<td class="org-left">Jaune/Rouge</td>
+</tr>
+
+<tr>
+<td class="org-left">Priseur</td>
+<td class="org-left">Vert/Violet</td>
+</tr>
+
+<tr>
+<td class="org-left">Coordinateur</td>
+<td class="org-left">Violet</td>
+</tr>
+
+<tr>
+<td class="org-left">Propulseur</td>
+<td class="org-left">Rouge</td>
+</tr>
+
+<tr>
+<td class="org-left">Soutien</td>
+<td class="org-left">Orange</td>
+</tr>
+
+<tr>
+<td class="org-left">Organisateur</td>
+<td class="org-left">Bleu/Violet</td>
+</tr>
+
+<tr>
+<td class="org-left">Perfectionneur</td>
+<td class="org-left">Bleu</td>
+</tr>
+
+<tr>
+<td class="org-left">Expert</td>
+<td class="org-left">Vert</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org0c9ef2b" class="outline-2">
+<h2 id="org0c9ef2b"><span class="section-number-2">6</span> Tableau de stress</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Couleur</th>
+<th scope="col" class="org-left">Stess (coissant vers le bas)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Dominante</td>
+<td class="org-left">o</td>
+</tr>
+
+<tr>
+<td class="org-left">Secondaire</td>
+<td class="org-left">oo</td>
+</tr>
+
+<tr>
+<td class="org-left">Secondaire</td>
+<td class="org-left">ooo</td>
+</tr>
+
+<tr>
+<td class="org-left">Dominante</td>
+<td class="org-left">oooo</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Ce tableau reprend les effets néfastes visibles en fonction du niveau de stress.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 17 mars 2021</p>
+<p class="author">Author: Jean-Claude Raskin (présentation), Simon Meyer (notes)</p>
+<p class="date">Created: 2021-03-17 mer. 16:46</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

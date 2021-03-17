@@ -1,4 +1,9 @@
 #+title: Sécurité machine
+#+OPTIONS: num:nil toc:t
+#+REVEAL_ROOT: file:///c:/Users/simon/.emacs.d/reveal.js/ 
+#+REVEAL_TRANS: Zoom
+#+REVEAL_THEME: Solarized
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 * Les directives
   - Diréctives européennes imposés sur env. 250mil
   - 1987: institutions bases sécurité santé pour toute l'europes
@@ -176,3 +181,15 @@
       + Catégorie 3 et 4 ajoutent de la redondance, double canal (un défaut ne peut pas perdre la fonction de sécu) et cat 4 détéction et très poussé
     + Calcul du temps pour avoir une défaillance (3 - 100 ans) dans le système de sécurité
         
+     #+begin_src python
+       def factorielle(n):
+           if n==1:
+               return n
+           else:
+               return n*factorielle(n-1)
+
+       return factorielle(6)
+     #+end_src
+
+     #+RESULTS:
+     : 720
