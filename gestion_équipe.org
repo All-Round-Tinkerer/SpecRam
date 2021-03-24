@@ -1,0 +1,238 @@
+#+title: Séminaire sur l’organisation et la gestion d’une équipe au sein d’un projet
+#+author: Jean-Claude Raskin (présentation), Simon Meyer (notes) 
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+date: 17 mars 2021
+#+email: etu38670@student.henallux.be
+* Introduction
+   + Présentation des tests ComColors et Belbin
+   + Présentation personnelle du conférencier
+   + Présentation des World Skills
+   + Déterminer ce qu'est un équipe
+   + Déterminer ce qu'est un groupe
+   + Déterminer la personalité et les compétences des membres de l'équipe
+** World Skills
+   + Compétition de compétences (coiffure, cuisine, menuiserie, design etc, en un temps imparti (rapide))
+   + Représentation nationale
+   + J-C Raskin coach l'équipe belge
+   + Une bonne coordination nécessaire
+   + Esprit d'équipe nécessaire
+   + Experience professionelle
+* Une équipe 
+  + Equipe ou groupe?
+    + Groupe: somme d'individualités en un lieu (pas forcément liées d'une manière ou un autre)
+    + Equipe: Groupe de personnes devant accomplir une tâche
+    + Equipe: Groupe de personnes qui agissent, se distraient (nécessite de bonnes compétences comportementales)
+** Dans une équipe 
+   + De bons soft skills
+   + De la confiance dans les compétences des autres
+   + Esprit d'équipe nécessaire
+     * Dans chaque équipe il y a des groupes qui se dirigent ensemble
+     * Attention de ne pas choisir que des gens identiques
+   + Toujours garder l'envie d'apprendre
+   + Ne pas rejeter des individus juste parce qu'ils sont différents
+   + Une équipe qui fonctionne démultiplie le nombre de cerveaux (1+1 = 3)
+     * Plus forte que la somme de ses composants
+** La communication
+   + Verbale (ce qu'on dit) 7%
+   + Para-verbale (comment on le dit) (ton, émotions etc) 38%
+   + Non verbale (ce qu'on fait) (Gestes etc) 55%
+** En personne
+   + Accepter ses faiblesses
+   + Accepter les forces de l'autre
+   + Positivité oui, mais attention à éviter le tout positif (équilibre à trouver, pur positif n'amène rien)
+   + Gérer les autres demande du discernement
+   + Eviter les coups de pression sur les autres
+   + Penser à récuperer de temps en temps
+* Profils
+  + Profils Belbin ou autre viennent de Carl Jung
+  + Théorie des personnalités multiples dans les années 20
+** Positions de vie
+|----------------------+----------------------|
+| Les autres (négatif) | Les autres (positif) |
+|----------------------+----------------------|
+| Moi (négatif)        | Moi (positif)        |
+|----------------------+----------------------|
+*** Tout négatif
+    + A éviter parce qu'on déprime très vite
+    + Depression 
+*** Moi positif et les autres négatifs
+    + Arrogance
+    + Insécurité
+    + Agressivité
+    + Mépris
+    + A éviter, côté vitriolé 
+*** Moi négatif et les autres positifs
+    + Culpabilité
+    + Admiration
+    + Frustration
+    + Infériorité
+    + A éviter, défaitiste 
+*** Moi positif et les autres positifs
+    + Coopération
+    + Ecoute
+    + Respect
+    + Ouverture
+    + Bien, mais attention a l'excssif dans le positif
+*** Eléments perturbateurs
+    + Nous amènent naturellement vers un des mauvais trois côtés
+    + Attention à la réaction et savoir comment se remettre
+** Métaphores du cerveau
+*** Cerveau réptilien
+    + Manger
+    + Boire
+    + Procréer
+*** Cerveau limbique
+    + Emotions 
+*** Néo-cortex
+    + Intelligence
+    + Relexion
+*** Hémisphères
+    + Gauche: Rationnel
+    + Droite: Emotionel
+*** Equilibre en tout nécessaire
+    + Pas toujours rationel
+    + **Nécéssaire de bien se connaître**
+* Couleurs de la personalité
+  + Permet de trouver les éléments de la personalités
+  + Certains élements sont à améliorer
+  + Il est souvent nécessaire de faire des choses pour lesquels c'est moins naturel
+    * Induit une grande fatigue
+  + Pas beaucoup d'inné, personalité définie vers 7 ans
+*** Couleur dominante
+    + Caractéristique définissante
+    + Motivation permanante 
+    + Mode de perception
+    + Mode de communication
+*** Couleur secondaire
+    + Peut changer au cours d'une vie (suite a certains évennements marquant)
+    + Motivation actuelle
+    + Combinaison entre ces deux couleurs dit comment le stress marche et comment on le gère
+*** Communication
+    + La communication peut être difficile entre des couleurs
+    + On peut avoir un conflit communicationel
+    + Bien connaître les autres pour savoir comment leur parler
+*** ATTENTION
+    + **NE PAS SE FOCALISER EXCESSIVEMENT SUR LES COULEURS (C'EST A TITRE INDICATIF)**
+** Couleur orange (émotionel)
+*** Qualités
+    + Aimables
+    + Chaleureux
+    + Dévoués
+*** Environnement
+    + Orienté vers les personnes
+*** Filtre perception
+    + Emotions
+    + Ressenti
+*** Motivation
+    + Besoins sensoriels
+    + Besoin de se sentir apprécié
+*** Comportement conditionnel
+    + Répond au désirs des autres avant les siens
+*** Comportement conflictuel
+    + Commet des erreurs/culpabilise
+    + Plaintes 
+** Couleur verte
+*** Qualités
+    + Réfléchi
+    + Tranquille
+    + Distancé
+*** Environnement
+    + Orienté vers les tâches
+*** Filtre perception
+    + Commence par réfléchir
+*** Motivation
+    + Besoin d'espace et de temps
+    + Besoin de tranquilité
+*** Comportement conditionnel
+    + Ne montre pas ses sentiments et ses difficultés
+*** Comportement conflictuel
+    + Ne peut plus se décider 
+** Couleur bleue
+*** Qualités
+    + Logique
+    + Compétent
+    + Structuré
+*** Environnement
+    + Orienté vers les tâches
+*** Filtre perception
+    + Pensée logique
+*** Motivation
+    + Besoin d'être félicité pour son travail
+    + Besoin de structurer
+*** Comportement conditionnel
+    + Perfectionnisme
+    + Obsession sur les détails
+*** Comportement conflictuel
+    + Se met en colère
+    + Fait les choses à la place des autres
+** Couleur violette
+*** Qualités
+    + Evaluateur
+    + Fiable
+    + De confiance
+*** Environnement
+    + Orienté vers la tâche ET la personne
+*** Filtre perception
+    + Il évalue en premier
+*** Motivation
+    + Besoin que son avis soit pris en compte, besoin d'être missionné 
+*** Comportement conditionnel
+    + Haut niveau d'exigence (de lui et des autres)
+    + Attention au burn-out
+*** Comportement conflituel
+    + Impose ses convictions
+** Couleur rouge
+*** Qualités
+    + Actif
+    + Energique
+    + Caméléon
+*** Environnement
+    + En fonction des opportunités (tâche OU personnes)
+*** Filtre perception
+    + Agit en premier
+*** Motivation
+    + Besoin d'être important en relevant des challenges et des défis
+*** Comportement conditionnel
+    + Doit trouver une solution et vite
+*** Comportement conflictuel
+    + Explosion, bruit, carnage
+** Couleur jaune
+*** Qualités
+    + Spontané
+    + Ludique
+    + Différent
+*** Environnement
+    + Orienté vers les personnes
+*** Filtre perception
+    + Réagit en premier
+*** Motivation
+    + Besoin de s'amuser et de nouveauté, de se sentir libre dans son travail
+*** Comportement conditionnel
+    + Raleur et rameur, aime pas les efforts, tout devient difficile à faire
+*** Comportement conflictuel
+    + Dos au mur, il rejette la faute sur les autres
+* Environnement favorable
+ + Attention, le test auto-réalisé n'est pas toujours fiable s'il est pris soi même
+ + Correspondance Couleur - Belbin
+| Belbin         | Couleur     |
+|----------------+-------------|
+| Concepteur     | Jaune       |
+| Promoteur      | Jaune/Rouge |
+| Priseur        | Vert/Violet |
+| Coordinateur   | Violet      |
+| Propulseur     | Rouge       |
+| Soutien        | Orange      |
+| Organisateur   | Bleu/Violet |
+| Perfectionneur | Bleu        |
+| Expert         | Vert        |
+|----------------+-------------|
+* Tableau de stress
+  | Couleur    | Stess (coissant vers le bas) |
+  |------------+------------------------------|
+  | Dominante  | o                           |
+  | Secondaire | oo                         |
+  | Secondaire | ooo                          |
+  | Dominante  | oooo                         |
+  |------------+------------------------------|
+
+  + Ce tableau reprend les effets néfastes visibles en fonction du niveau de stress.

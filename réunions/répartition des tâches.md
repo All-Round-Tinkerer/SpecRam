@@ -7,7 +7,6 @@
 ## Nicolas Baiverlin
 - Conception physique(plans 3D, plans 2D)
 - Rédaction des notices, documents et cahier des charges
-- 
 
 ## Simon Meyer
 - Etude théorique

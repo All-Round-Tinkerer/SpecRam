@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-12 ven. 23:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sécurité machine</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Sécurité machine</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org43e8597">Les directives</a>
+<ul>
+<li><a href="#org159bfbe">Directives sociales</a></li>
+<li><a href="#org8670f3c">Directives économiques</a></li>
+</ul>
+</li>
+<li><a href="#orgfa27242">La directive machine</a>
+<ul>
+<li><a href="#org7aa75a2">Objectifs</a></li>
+<li><a href="#org5b0f9fe">S'applique</a></li>
+<li><a href="#org504954a">Droit de pays</a></li>
+<li><a href="#org6ad2700">Première directive machine</a></li>
+<li><a href="#orgf2b69fb">Directive équipement de travail</a></li>
+<li><a href="#orgc70d6fd">Quoi faire quand on recontre une machines</a></li>
+<li><a href="#orgb992723">Evolution</a></li>
+<li><a href="#org5ca58f7">Compostion de la directive</a></li>
+</ul>
+</li>
+<li><a href="#org39b5d96">Plusieurs directives</a>
+<ul>
+<li><a href="#org7b0ca35">Champ d'application</a></li>
+<li><a href="#org6cd5376">Quasi-machine</a></li>
+<li><a href="#org7fcfe9d">Articles a lire</a></li>
+<li><a href="#org90d3000">Annexe 1: Exigences essentielles</a>
+<ul>
+<li><a href="#org5421ba6">Descriptions des points</a></li>
+</ul>
+</li>
+<li><a href="#orgab470eb">Annexe 2: Déclaration de conformité</a></li>
+<li><a href="#org08461a1">Annexe 3: Marquage CE</a></li>
+<li><a href="#orgb987e30">Autre annexes</a></li>
+<li><a href="#org777fc05">Résumé</a></li>
+</ul>
+</li>
+<li><a href="#orge183bf3">Danger ou risque</a>
+<ul>
+<li><a href="#org6765ee5">Danger</a></li>
+<li><a href="#org89ea698">Risque</a></li>
+<li><a href="#org8993993">Appréciation des risques</a>
+<ul>
+<li><a href="#orga56dc5c">Méthodes</a></li>
+<li><a href="#orgb7180c5">Estimation des risques</a></li>
+</ul>
+</li>
+<li><a href="#orgbf9602c">Normes</a>
+<ul>
+<li><a href="#org5cab417">Norme 13849</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org43e8597" class="outline-2">
+<h2 id="org43e8597">Les directives</h2>
+<div class="outline-text-2" id="text-org43e8597">
+<ul class="org-ul">
+<li>Diréctives européennes imposés sur env. 250mil</li>
+<li>1987: institutions bases sécurité santé pour toute l'europes
+<ul class="org-ul">
+<li>Création de l'acte unique composé de 2 articles:
+<ul class="org-ul">
+<li>100a: directives économiques pour les fabriquants</li>
+<li>118a: directives sociales pour les travailleurs</li>
+</ul></li>
+</ul></li>
+
+<li>Tout les européens doivent être en sécurité sur le monde du travail</li>
+<li>Tous les pays ne l'ont pas encore adoptés
+
+<ul class="org-ul">
+<li>Directives économiques: sécurité au niveau des produits pour l'harmonisation européennes
+<ul class="org-ul">
+<li>N'avoir qu'une seule harmonisation</li>
+<li>Tous les pays les adoptent</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Les deux directives ne s'appliquent pas aux mêmes personnes (fabriquant ou utilisateur)
+</p>
+</div>
+<div id="outline-container-org159bfbe" class="outline-3">
+<h3 id="org159bfbe">Directives sociales</h3>
+<div class="outline-text-3" id="text-org159bfbe">
+<ul class="org-ul">
+<li>DIréctive mères: Sécurité et santé dans le milieu du travail
+<ul class="org-ul">
+<li>Utilisation d'EPI (pour l'utilisateur)</li>
+<li>Zones de travail etc</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8670f3c" class="outline-3">
+<h3 id="org8670f3c">Directives économiques</h3>
+<div class="outline-text-3" id="text-org8670f3c">
+<ul class="org-ul">
+<li>Directives des produits
+<ul class="org-ul">
+<li>Diréctive machine</li>
+<li>Ascenceurs</li>
+<li>Jouets etc</li>
+<li>Label CE</li>
+</ul></li>
+<li>Production d'outils d'EPI (pour le fabriquant)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa27242" class="outline-2">
+<h2 id="orgfa27242">La directive machine</h2>
+<div class="outline-text-2" id="text-orgfa27242">
+</div>
+<div id="outline-container-org7aa75a2" class="outline-3">
+<h3 id="org7aa75a2">Objectifs</h3>
+<div class="outline-text-3" id="text-org7aa75a2">
+<ul class="org-ul">
+<li>Eviter les différcences entre les pays</li>
+<li>Exculsivement directives minimales</li>
+<li>Protection des hommmes, biens, et environnement et les animaux</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5b0f9fe" class="outline-3">
+<h3 id="org5b0f9fe">S'applique</h3>
+<div class="outline-text-3" id="text-org5b0f9fe">
+<ul class="org-ul">
+<li>S'applique à tous les fabriquants de machines</li>
+<li>A tous les constructeurs européens</li>
+<li>Aux mandataires des constructeurs étangers (représenants) (on peut devenir mandataire sans le savoir)
+<ul class="org-ul">
+<li>Attention l'importateur de la machine peut devenir mandataire</li>
+<li>Attention s'applique aussi aux machines faite "maison" on devient alors constructeur</li>
+</ul></li>
+<li>Retranscrit dans tous les pays (nul n'est censé ignorer la loi)
+<ul class="org-ul">
+<li>Peut amener à des sanctions économiques en cas de problème (retirer du marché, rappels)</li>
+<li>Sanctions pénales possibles aussi (amendes, prison etc), même pour l'opérateur s'il est réspnsable</li>
+</ul></li>
+<li>IL FAUT DONC CORRECTEMENT FAIRE SON TRAVAIL QU'ON SOIT FABRIQUANT OU UTILISATEUR</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org504954a" class="outline-3">
+<h3 id="org504954a">Droit de pays</h3>
+<div class="outline-text-3" id="text-org504954a">
+<ul class="org-ul">
+<li>L'état et la directive européenne ne sont pas toujours d'accords (mais souvent identiques)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ad2700" class="outline-3">
+<h3 id="org6ad2700">Première directive machine</h3>
+<div class="outline-text-3" id="text-org6ad2700">
+<ul class="org-ul">
+<li>2006/42: Pas restranscrite dans tous les pays au même moment</li>
+<li>Régelement européen prévu pour 2023</li>
+<li>Avant 1/1/93: Constituer un dossier machine en fonction du pays (et pour chaque pays)</li>
+<li>Après 1/1/93: Choix entre dossier machine en fonction du pays OU dossier respectant la directive européenne</li>
+<li>Parès 1/1/95: Directive européenne obligatioire</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2b69fb" class="outline-3">
+<h3 id="orgf2b69fb">Directive équipement de travail</h3>
+<div class="outline-text-3" id="text-orgf2b69fb">
+<ul class="org-ul">
+<li>Sécurité et Santé des travailleurs</li>
+<li>Assure que l'employeur fourni des machines et installations et éqipements de travail conforme et surs</li>
+<li>Obligateurs, toujours restranscrite dans les droits belges</li>
+<li>Soumis au contrôle par l'inspection du travail régulière</li>
+<li>Dernière 2007/CE</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc70d6fd" class="outline-3">
+<h3 id="orgc70d6fd">Quoi faire quand on recontre une machines</h3>
+<div class="outline-text-3" id="text-orgc70d6fd">
+<ul class="org-ul">
+<li>Toutes les machines doivent être conformes a la directive machine au 1/1/97</li>
+<li>Vérifier que tout est bien conforme</li>
+<li>Date de première mise en service en union européenne fait foi (attention en importation)</li>
+<li>Si la machine est mise en service avant 1/1/95, elle doit respecter la directive équipement de travail.</li>
+<li>La directive reprend 19 points à s'assurer de la conformité</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb992723" class="outline-3">
+<h3 id="orgb992723">Evolution</h3>
+<div class="outline-text-3" id="text-orgb992723">
+<ul class="org-ul">
+<li>La directive machine est régulièrement modifiée</li>
+<li>Chaque évolution donne du temps (24 mois) pour chaque pays à l'implémenter</li>
+<li>Il y a également un délai d'application (18 mois en plus des 24 mois)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5ca58f7" class="outline-3">
+<h3 id="org5ca58f7">Compostion de la directive</h3>
+<div class="outline-text-3" id="text-org5ca58f7">
+<ul class="org-ul">
+<li>63 pages</li>
+<li>30 points administratifs (pas techinques)</li>
+<li>29 points juridiques (pour les avocats)</li>
+<li>12 annexes qui donnent les points techniques.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org39b5d96" class="outline-2">
+<h2 id="org39b5d96">Plusieurs directives</h2>
+<div class="outline-text-2" id="text-org39b5d96">
+<ul class="org-ul">
+<li>5 directices fréquentes:
+<ul class="org-ul">
+<li>Directive machine</li>
+<li>DIrective basse tension</li>
+<li>Directive compatibilité électromagnétique</li>
+<li>Directive PED et équipements sous pression</li>
+<li>Directive ATEX (fabriquant de l'élément pneumatique)</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org7b0ca35" class="outline-3">
+<h3 id="org7b0ca35">Champ d'application</h3>
+<div class="outline-text-3" id="text-org7b0ca35">
+<ul class="org-ul">
+<li>S'assurer que l'on se trouve dans le champ d'application des directives</li>
+<li>Il se pourrait qu'on y rentre pas (et donc pas besoin  d'appliquer)</li>
+<li>Consulter les articles 1 et 2 de la directive européenne pour voir le champ d'application</li>
+<li>Guide de 480 pages qui reprend tout en détail en cas de doute</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6cd5376" class="outline-3">
+<h3 id="org6cd5376">Quasi-machine</h3>
+<div class="outline-text-3" id="text-org6cd5376">
+<ul class="org-ul">
+<li>Système qui obéit a la définition d'une machine mais qui ne fait aucune fontion seule</li>
+<li>Reliée à un autre système qui rendrait le système utile</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fcfe9d" class="outline-3">
+<h3 id="org7fcfe9d">Articles a lire</h3>
+<div class="outline-text-3" id="text-org7fcfe9d">
+<ul class="org-ul">
+<li>Article 1</li>
+<li>Article 2</li>
+<li>Article 5</li>
+<li>Article 12</li>
+<li>Article 13</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org90d3000" class="outline-3">
+<h3 id="org90d3000">Annexe 1: Exigences essentielles</h3>
+<div class="outline-text-3" id="text-org90d3000">
+<ul class="org-ul">
+<li>Annexe I: Tous doit respecter les exigences essentielles</li>
+<li>Le fabriquent doit faire une évaluation des risques, et elle doit être suivie dans la conception</li>
+<li>Il faut d'abord effectuer l'analyse des risques AVANT de la concenvoir et non après</li>
+<li>Il faut prendre en compte toutes les phases de vie de la machine jusque sa mise au rebus et les risques spécifiques qui s'y rapportent</li>
+<li>L'intégration de la sécurité doit se faire dans le processus de construction et dans un ordre précis</li>
+<li>Ordre: Eliminer les risques tant que possible, puis diminuer au maximum les risques dans la conception, puis prendre des mesures de protection et enfin prévenir les utilisateurs</li>
+<li>Exemple: limiter le couple moteur des engins qui n'en ont pas besoinExemple: limiter le couple moteur des engins qui n'en ont pas besoin.</li>
+<li>Contrôles periodiques à réaliser</li>
+</ul>
+</div>
+<div id="outline-container-org5421ba6" class="outline-4">
+<h4 id="org5421ba6">Descriptions des points</h4>
+<div class="outline-text-4" id="text-org5421ba6">
+<ol class="org-ol">
+<li>Exigences essentielles de santé et sécurité
+<ul class="org-ul">
+<li>Généralités</li>
+<li>Systèmes de commande</li>
+<li>Mesure de protections</li>
+<li>etc</li>
+</ul></li>
+<li>Exigences essentielles santé pour certains catégories (alimentaire, et cosmétiques)</li>
+<li>Exigences essentielles pour la mobilité des machines</li>
+<li>Exigences essentielles pout les opérations de levage</li>
+<li>Exigences essentielles pour les opérations sous-terraines</li>
+<li>Exigences essentielles pour les machines de levage de personnes</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgab470eb" class="outline-3">
+<h3 id="orgab470eb">Annexe 2: Déclaration de conformité</h3>
+<div class="outline-text-3" id="text-orgab470eb">
+<ol class="org-ol">
+<li>Déclaration conformité machine -&gt; marquage CE</li>
+<li>Déclaration intégration pour quasi-machine -&gt; pas de marquage CE</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org08461a1" class="outline-3">
+<h3 id="org08461a1">Annexe 3: Marquage CE</h3>
+<div class="outline-text-3" id="text-org08461a1">
+<ul class="org-ul">
+<li>Conformité du marquage CE (dimmensions et graphique pour éviter la contrebande)</li>
+<li>Passeport européen (assure le respect de la directive pour la machine)</li>
+<li>Attention: le marquage est auto-certifié (le plus souvent), donc pas un gage de qualité ni une garantie</li>
+<li>Obligatoire sur les machines en Europe</li>
+<li>Toujours vérifier la déclaration de conformité</li>
+<li>Si la machine est présente dans l'annexe 4, en fonction de la réponse voir les procédures spécifiques</li>
+<li>Il peut être nécéssaire dans certains cas de faire appel à un organisme notifié, qui à les compétences pour contrôler certains produits</li>
+<li>L'organisme de contrôle prend aussi la résponsabilité des machines</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb987e30" class="outline-3">
+<h3 id="orgb987e30">Autre annexes</h3>
+<div class="outline-text-3" id="text-orgb987e30">
+<ul class="org-ul">
+<li>Annexe 5: Liste des composants de sécurité de l'annexe 2</li>
+<li>Annexe 6: Notice d'assemblage de la quasi-machine</li>
+<li>Annexe 7: Dossier techniques: Assure la bonne foi du fabriquant avec l'appréciation des risques (uniquement pour l'instance judiciaire)</li>
+<li>Annexe 8, 9 et 10: Conformité, assurance et notifications</li>
+<li>Annexe 11: Critère minimum</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org777fc05" class="outline-3">
+<h3 id="org777fc05">Résumé</h3>
+<div class="outline-text-3" id="text-org777fc05">
+<ul class="org-ul">
+<li>Directives machine obligatioire dans le pays et l'UE</li>
+<li>Ne contient que les exigences essentielles</li>
+<li>Normes pas obligatoires mais le suivi donne une présomption de conformité</li>
+<li><p>
+Voir tableau résumé produit soumis a la directive machine
+</p>
+
+<div id="org9ed50d4" class="figure">
+<p><img src="Directive_machine.png" alt="Directive_machine.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Tableau résumé</p>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge183bf3" class="outline-2">
+<h2 id="orge183bf3">Danger ou risque</h2>
+<div class="outline-text-2" id="text-orge183bf3">
+</div>
+<div id="outline-container-org6765ee5" class="outline-3">
+<h3 id="org6765ee5">Danger</h3>
+<div class="outline-text-3" id="text-org6765ee5">
+<p>
+Situation pouvant amener à des blessures ou d'autres conséquences néfastes 
+</p>
+</div>
+</div>
+<div id="outline-container-org89ea698" class="outline-3">
+<h3 id="org89ea698">Risque</h3>
+<div class="outline-text-3" id="text-org89ea698">
+<p>
+Contact avec un danger pouvant amener à des blessures ou autres conséquences néfastes 
+</p>
+</div>
+</div>
+<div id="outline-container-org8993993" class="outline-3">
+<h3 id="org8993993">Appréciation des risques</h3>
+<div class="outline-text-3" id="text-org8993993">
+<ul class="org-ul">
+<li>Sécurité au travail</li>
+<li>Ergonomie</li>
+<li>Hygiène</li>
+<li>Charge psycho-sociales</li>
+<li>Machines</li>
+<li>Produits dangereux etc</li>
+</ul>
+</div>
+<div id="outline-container-orga56dc5c" class="outline-4">
+<h4 id="orga56dc5c">Méthodes</h4>
+<div class="outline-text-4" id="text-orga56dc5c">
+<ul class="org-ul">
+<li>Checklists
+<ul class="org-ul">
+<li>Entreprise</li>
+<li>Machines</li>
+</ul></li>
+<li>HAZOP</li>
+<li>Ishikawa</li>
+<li>HEEPO</li>
+</ul>
+<p>
+Beaucoup de méthodes, tous ayant pour but de ne rien oublier
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7180c5" class="outline-4">
+<h4 id="orgb7180c5">Estimation des risques</h4>
+<div class="outline-text-4" id="text-orgb7180c5">
+<ul class="org-ul">
+<li>Donner des valeurs quantitatives quant aux risques</li>
+<li>Exemples: Tableau à deux entrées ou norme ISO-12100 (utilisé le plus souvent)</li>
+<li>Pas obligatoire, mais recommandé pour donner des priorités sur l'intervention</li>
+<li>Permet d'évaluer l'éfficacité des mesures</li>
+<li>Si ISO-12100 alors commencer par la fin (plus motivant)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf9602c" class="outline-3">
+<h3 id="orgbf9602c">Normes</h3>
+<div class="outline-text-3" id="text-orgbf9602c">
+<ul class="org-ul">
+<li>Les normes étaient standardisés par pays, donc on à adopté les normes européennes (EN). Acheter les normes EN et pas pr EN.</li>
+<li>Norme EN ISO doublement reconnue</li>
+<li>Environ 1600 normes actuellement en service</li>
+<li>Certaines normes sont fondamentales (générales A), de groupe (type B), spécifiques pour certaines machines (type C)</li>
+<li>On est pas obligé de les suivre</li>
+<li>Plus fréquentes: 12100, 14119 etc</li>
+</ul>
+</div>
+<div id="outline-container-org5cab417" class="outline-4">
+<h4 id="org5cab417">Norme 13849</h4>
+<div class="outline-text-4" id="text-org5cab417">
+<ul class="org-ul">
+<li>Cette norme indique le système de commande relatifs à la sécurité</li>
+<li>Elle permet de s'assurer que les commandes des systèmes de sécurté sont OK</li>
+<li>Déterminer le Plr pour évaluer les performances requis des systèmes de contrôle</li>
+<li>4 catégories à resecter concernant le nombre de contacts et autre (cat B, cat 1 monocanal (1 éprouvé), cat 2 monocanal mais autocontrôle nécéssaire avec relai de sécu)
+<ul class="org-ul">
+<li>Catégorie 3 et 4 ajoutent de la redondance, double canal (un défaut ne peut pas perdre la fonction de sécu) et cat 4 détéction et très poussé</li>
+</ul></li>
+<li>Calcul du temps pour avoir une défaillance (3 - 100 ans) dans le système de sécurité</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-03-12 ven. 23:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
